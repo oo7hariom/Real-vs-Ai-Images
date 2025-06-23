@@ -48,11 +48,9 @@ Welcome to the **AI Extension - Image Authenticator** repository! This project p
 ## Project Structure
 
 ```
-ai_extension/
-├── src/            # Source code for the extension
-├── public/         # Static assets (icons, manifest, etc.)
-├── build/          # Production build output
-├── package.json    # Project configuration and dependencies
+Ai_Extension/
+├── public/         # Static assets and source code  (icons, manifest, etc.)
+    
 └── README.md       # This file
 ```
 
