@@ -46,7 +46,8 @@ To build a high-accuracy classifier that can distinguish between AI-generated im
 
 ## 🎥 Demo Video
 
-[Watch Demo]((https://drive.google.com/file/d/15yEsrw0r3ITI3dvTBIkoP1-EzVGpctJn/view?usp=sharing))
+[![Watch the video](https://img.youtube.com/vi/VIDEO_ID/maxresdefault.jpg)](https://drive.google.com/file/d/15yEsrw0r3ITI3dvTBIkoP1-EzVGpctJn/view?usp=sharing)
+
 
 ---
 
