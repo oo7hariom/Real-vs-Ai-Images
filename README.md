@@ -42,6 +42,13 @@ To build a high-accuracy classifier that can distinguish between AI-generated im
 ### 📊 Classification Report
 
 ![Classification Report](evaL.jpg)
+---
+
+## 🎥 Demo Video
+
+[Watch Demo]((https://drive.google.com/file/d/15yEsrw0r3ITI3dvTBIkoP1-EzVGpctJn/view?usp=sharing))
+
+---
 
 ## 🧪 Key Steps in the Notebook
 
