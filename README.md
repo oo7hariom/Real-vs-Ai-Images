@@ -1,78 +1,93 @@
-# IsThisReal.AI – AI-Generated Image Detection Browser Extension
+# 🌟 IsThisReal.AI – AI-Generated Image Detection Browser Extension  
 
-This notebook trains a deep learning model to classify images as **AI-generated** or **real** using the **Vision Transformer (ViT)** architecture. It forms the backend engine for a browser extension that detects fake images on the web.
-
----
-
-## 📌 Project Objective
-
-To build a high-accuracy classifier that can distinguish between AI-generated images (from models like DALL·E, MidJourney, Stable Diffusion) and real-world photos, aiding in misinformation detection.
+A **real-time browser extension** that detects whether an image is AI-generated or real using a deep learning model (Vision Transformer).  
+This tool aims to combat misinformation by helping users instantly identify synthetic images while browsing social media or any web page.  
 
 ---
 
-## 🧠 Model Architecture
+## 🚀 Features  
 
-- **Model Used:** Vision Transformer (ViT)
-- **Library:** Hugging Face Transformers
-- **Framework:** PyTorch
-- **Task:** Binary classification (AI vs Real)
-
----
-
-## 📁 Dataset Sources
-
-1. [Sharma AI vs Real Images Dataset (V1)](https://www.kaggle.com/datasets/harsh7489/sharma-ai-real-images-dataset/data)  
-2. [Sharma AI vs Real Images Dataset (V2)](https://www.kaggle.com/datasets/harsh7489/sharma-ai-real-images-dataset-v2/data)  
-3. [140K Real and Fake Faces Dataset](https://www.kaggle.com/datasets/xhlulu/140k-real-and-fake-faces)
-
-> Total images used: **500,000** (balanced 250k AI + 250k Real)
-
----
-## 📈 Performance
-
-- **Test Accuracy:** ~92.93%
-- **Precision (AI Images):** 97.21%
-- **Recall (Real Images):** 97.46%
-- **F1-Score (Macro Average):** 92.92%
-
-### 🧾 Confusion Matrix
-
-![Confusion Matrix](result.jpg)
-
-### 📊 Classification Report
-
-![Classification Report](evaL.jpg)
----
-
-## 🎥 Demo Video
-
-[![Watch the video](https://img.youtube.com/vi/VIDEO_ID/maxresdefault.jpg)](https://drive.google.com/file/d/15yEsrw0r3ITI3dvTBIkoP1-EzVGpctJn/view?usp=sharing)
-
+- 🖼️ **Hover-based detection** — no click or upload required  
+- ⚡ **Real-time predictions** using a Vision Transformer model  
+- 🧠 **Trained on 500,000+ images** (AI-generated + real)  
+- 🌐 **Lightweight Chrome Extension** for seamless browsing  
+- 🔍 **Flask-based backend** for model inference  
 
 ---
 
-## 🧪 Key Steps in the Notebook
+## 🛠️ Tech Stack  
 
-- Data loading and preprocessing
-  - Image resizing, normalization
-  - Augmentation: flipping, cropping
-- Dataset balancing
-- Vision Transformer configuration using `ViTForImageClassification`
-- Training and validation split (75/25)
-- Evaluation using accuracy, loss plots, and confusion matrix
+### 💻 Frontend / Extension  
+- JavaScript (Core logic)  
+- HTML/CSS (UI)  
+- Chrome Extension APIs  
+- FileReader API (Image conversion to Base64)  
+- DOM Manipulation  
+
+### 🧠 Backend & Model  
+- Python  
+- Flask (API server)  
+- PyTorch  
+- Hugging Face Transformers  
+- Vision Transformer (ViT)  
+- Custom image datasets  
+- Image augmentation (resizing, cropping, normalization)  
 
 ---
 
-## 📈 Performance
+## 📊 Model Training  
 
-- **Test Accuracy:** ~92.93%
-- **Loss:** Tracked over training epochs
-- **Confusion Matrix:** Visualized to analyze misclassifications
+- **Architecture:** ViT (Vision Transformer) from Hugging Face  
+- **Dataset:** 500,000 images (250k real + 250k AI-generated)  
+- **Training/Validation Split:** 75% / 25%  
+- **Accuracy:** 🎯 **92.93%** on test data  
+- Loss & Confusion matrix tracked for validation  
 
 ---
 
-## ⚙️ Requirements
+## 📂 Datasets Used  
 
-Install dependencies:
-```bash
-pip install torch torchvision transformers datasets matplotlib scikit-learn
+1. Sharma AI vs Real Images Dataset  
+   🔗 https://www.kaggle.com/datasets/harsh7489/sharma-ai-real-images-dataset/data  
+
+2. Sharma AI vs Real Images Dataset V2  
+   🔗 https://www.kaggle.com/datasets/harsh7489/sharma-ai-real-images-dataset-v2/data  
+
+3. 140K Real and Fake Faces Dataset  
+   🔗 https://www.kaggle.com/datasets/xhlulu/140k-real-and-fake-faces  
+
+---
+
+## 🖼️ How It Works (System Flow)  
+
+1. User **hovers over an image** in the browser  
+2. Image is **converted to Base64** using FileReader API  
+3. Base64 image is **sent to the Flask server**  
+4. **ViT model predicts** whether it's AI or Real  
+5. **Result is displayed** on the image as a real-time overlay  
+
+---
+
+## 📌 Limitations  
+
+- ⚠️ May underperform on AI models not seen during training  
+- 📉 Accuracy drops for low-quality/compressed images  
+- 🔒 Currently only supports binary classification (AI vs Real)  
+
+---
+
+## 🎥 Project Demo  
+
+<p align="center">  
+  👉 <a href="https://drive.google.com/file/d/15yEsrw0r3ITI3dvTBIkoP1-EzVGpctJn/view?usp=sharing" target="_blank"><b>Watch the Demo Video</b></a> 👈  
+</p>  
+
+---
+
+## 🔮 Future Scope  
+
+- 🏷️ Source model identification (DALL·E, MidJourney, etc.)  
+- 🎬 Support for AI-generated videos and text  
+- 🔧 Model fine-tuning with user feedback  
+
+---
